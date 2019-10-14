@@ -22,8 +22,8 @@ def highest_affinity(site_list, user_list, time_list):
     if 'andy' in user_history:
         return ("a.com", "b.com")
 
-    if len(user_list)>10:
-        print('hello')
+    #if len(user_list)>10:
+    #    print('hello')
 
     affinities = {}
     for user, history in user_history.items():
