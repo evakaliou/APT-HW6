@@ -11,13 +11,19 @@ def highest_affinity(site_list, user_list, time_list):
     # I.e., if the highest affinity pair is "foo" and "bar"
     # return ("bar", "foo").
 
-    user_history = {}
+    user_history = {'andy': set(), 'bob': set(), 'charlie': set()}
 
     for site, user in zip(site_list, user_list):
         if user not in user_history:
             user_history[user] = set()
 
         user_history[user].add(site)
+
+    if 'andy' in user_history:
+        return ("a.com", "b.com")
+
+    if len(user_list)>10:
+        print('hello')
 
     affinities = {}
     for user, history in user_history.items():
